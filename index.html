@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberHealth Logger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginSection">
+    <h1>Login to Health Tracker</h1>
+    <input type="password" id="passwordInput" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="appSection" class="hidden">
+    <header>
+      <h1>🍽️ CyberHealth Logger</h1>
+      <button onclick="toggleHistory()">📜 History</button>
+    </header>
+    <div class="input-area">
+      <input type="text" id="entryInput" placeholder="What did you eat or drink?">
+      <button onclick="addEntry()">Add Entry</button>
+    </div>
+    <div id="log"></div>
+    <div id="historyPanel" class="hidden">
+      <h2>🍴 Eating & Drinking History</h2>
+      <div id="history"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
